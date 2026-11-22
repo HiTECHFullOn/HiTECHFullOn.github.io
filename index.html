@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lee Woosung — Home Page</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1c1c1c;
+      --muted-color: #555555;
+      --link-color: #003399;
+      --link-visited: #551a8b;
+      --link-hover: #8b0000;
+      --border-color: #cccccc;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 780px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: var(--link-visited);
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    /* Header & Profile */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    .header-info h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin: 0 0 6px 0;
+      letter-spacing: 0.01em;
+    }
+
+    .affiliation {
+      margin: 0 0 12px 0;
+      color: var(--muted-color);
+    }
+
+    .contact-table {
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .contact-table td {
+      padding: 1px 12px 1px 0;
+      vertical-align: top;
+    }
+
+    .contact-table td:first-child {
+      color: var(--muted-color);
+      font-style: italic;
+    }
+
+    .photo-box {
+      flex-shrink: 0;
+      width: 135px;
+      height: 165px;
+      border: 1px solid var(--border-color);
+      background-color: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888888;
+      font-size: 0.85rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Navigation */
+    nav {
+      font-size: 0.95rem;
+      padding: 8px 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+
+    nav a {
+      margin-right: 6px;
+    }
+
+    nav span.sep {
+      color: #999999;
+      margin-right: 6px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: normal;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 4px;
+      margin: 0 0 12px 0;
+      color: #111111;
+    }
+
+    p {
+      margin: 0 0 12px 0;
+    }
+
+    ul, ol {
+      margin: 0 0 12px 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      color: var(--muted-color);
+      font-size: 0.92rem;
+    }
+
+    .links-inline {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.88rem;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 44px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--muted-color);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      body {
+        margin: 20px auto;
+        padding: 0 16px;
+      }
+
+      header {
+        flex-direction: column-reverse;
+      }
+
+      .photo-box {
+        width: 110px;
+        height: 135px;
+      }
+    }
+
+    /* Print-friendly CV layout */
+    @media print {
+      body {
+        margin: 0;
+        max-width: 100%;
+        font-size: 11pt;
+      }
+
+      nav {
+        display: none;
+      }
+
+      a {
+        color: #000000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-info">
+      <h1>Lee Woosung</h1>
+      <p>/이우성/ [i.u.sʌŋ]</p>
+      <p class="affiliation">
+        Undergraduate Student<br>
+        Department of Linguistics, Seoul National University
+      </p>
+      <table class="contact-table">
+        <tr>
+          <td>Email:</td>
+          <td><code>cosmosplendor [at] snu.ac.kr</code></td>
+        </tr>
+        <tr>
+          <td>Links:</td>
+          <td>
+            <a href="https://github.com/HiTECHFullOn" target="_blank" rel="noopener">GitHub</a> &middot; 
+            <a href="https://huggingface.co/Cosmosplendor" target="_blank" rel="noopener">HuggingFace</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="photo-box">
+      <img src="Lee.jpg" alt="Lee Woosung">
+    </div>
+  </header>
+
+  <nav aria-label="Section navigation">
+    <a href="#about">About</a><span class="sep">|</span>
+    <a href="#education">Education</a><span class="sep">|</span>
+    <a href="#misc">Misc</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a senior undergraduate student at Seoul National University, pursuing a double major in
+        Linguistic and Mathematics. My primary academic interests lie at
+        the intersection of <strong>formal language theory</strong>
+        and <strong>algebraic structures</strong>.
+      </p>
+      <p>
+        Currently, I am on leave to complete my mandatory military service (expected discharge: February 2028)
+        and will resume my studies in Spring 2028.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          B.A. in Linguistics &amp; B.S. in Mathematics 
+          <span class="meta">(2022 – 2028, expected)</span><br>
+          <span class="meta">
+            Selected Coursework: Generative Phonology, Generative Syntax, NLP, Abstract Algebra, Representation Theory.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="misc">
+      <h2>Miscellaneous</h2>
+      <ul>
+        <li><strong>Activities:</strong> <a href="https://www.instagram.com/snu_lingua/" target="_blank" rel="noopener">서울대학교 언어학회</a>(2024), <a href="https://www.instagram.com/mvsicamediaevalis/" target="_blank" rel="noopener">중세음악연구회</a>(2026). </li>
+        <li><strong>Languages:</strong> Korean (native), English (reading).</li>
+        <li><strong>Other Interests:</strong> data analysis, photography, cinema.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>Lee Woosung</span>
+    <span>Last updated: November 2026</span>
+  </footer>
+
+</body>
+</html>
